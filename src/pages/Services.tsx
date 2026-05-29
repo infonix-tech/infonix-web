@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, Users, Laptop, PiggyBank, BarChart, ShieldCheck, Code, Cloud, Lightbulb, UserCheck, Briefcase, GraduationCap, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useSEO } from '../hooks/useSEO';
 
 interface ServiceContent {
     name: string;
@@ -12,6 +13,21 @@ interface ServiceContent {
 }
 
 const Services: React.FC = () => {
+    useSEO({
+        title: 'Services — Software, HR & Finance Consulting',
+        description:
+            'Tailored consulting across software engineering, human resources, and finance — from custom development and cloud architecture to talent acquisition and financial planning.',
+        path: '/services',
+        keywords: [
+            'software consulting',
+            'HR consulting',
+            'finance consulting',
+            'cloud architecture',
+            'talent acquisition',
+            'UK consulting firm',
+        ],
+    });
+
     const servicesList: ServiceContent[] = [
         {
             name: "Software Consulting",
@@ -51,7 +67,7 @@ const Services: React.FC = () => {
     return (
         <div className="pt-20">
             {/* Hero Section */}
-            <section className="bg-primary text-surface py-20 px-4 sm:px-6 lg:px-8">
+            <section className="bg-primary text-surface py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -60,10 +76,10 @@ const Services: React.FC = () => {
                         className="max-w-3xl"
                     >
                         <h2 className="text-secondary font-bold tracking-widest uppercase mb-4 text-sm">Our Services</h2>
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6">
                             Tailored Consulting Solutions
                         </h1>
-                        <p className="text-lg text-surface/80">
+                        <p className="text-base sm:text-lg text-surface/80">
                             Partnering with you to deliver strategic excellence across technology, human resources, and finance.
                         </p>
                     </motion.div>
@@ -71,8 +87,8 @@ const Services: React.FC = () => {
             </section>
 
             {/* Services List Section */}
-            <section className="bg-background py-16 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-7xl mx-auto space-y-24">
+            <section className="bg-background py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+                <div className="max-w-7xl mx-auto space-y-16 sm:space-y-24">
                     {servicesList.map((service, idx) => (
                         <motion.div
                             key={idx}
@@ -80,27 +96,27 @@ const Services: React.FC = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.6 }}
-                            className="pt-12 border-t border-surface/50 first:border-0 first:pt-0"
+                            className="pt-10 sm:pt-12 border-t border-surface/50 first:border-0 first:pt-0"
                         >
-                            <div className="flex items-center gap-4 mb-4">
-                                <div className="bg-surface p-4 rounded-xl">
+                            <div className="flex items-center gap-3 sm:gap-4 mb-4 flex-wrap">
+                                <div className="bg-surface p-3 sm:p-4 rounded-xl">
                                     {service.icon}
                                 </div>
-                                <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary">
+                                <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary">
                                     {service.name}
                                 </h2>
                             </div>
-                            <p className="text-xl text-primary/70 mb-10 max-w-3xl">
+                            <p className="text-base sm:text-lg md:text-xl text-primary/70 mb-8 sm:mb-10 max-w-3xl">
                                 {service.description}
                             </p>
 
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-10">
                                 {service.subServices.map((sub, sidx) => (
-                                    <div key={sidx} className="bg-white p-8 rounded-2xl shadow-sm border border-surface hover:shadow-md transition-shadow duration-300">
+                                    <div key={sidx} className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-surface hover:shadow-md transition-shadow duration-300">
                                         <div className="mb-4 text-secondary/70">
                                             {sub.icon}
                                         </div>
-                                        <h3 className="text-xl font-bold text-primary mb-3">{sub.title}</h3>
+                                        <h3 className="text-lg sm:text-xl font-bold text-primary mb-3">{sub.title}</h3>
                                         <p className="text-primary/70">{sub.desc}</p>
                                     </div>
                                 ))}
@@ -108,7 +124,7 @@ const Services: React.FC = () => {
 
                             <Link
                                 to="/contact"
-                                className="inline-flex items-center justify-center bg-secondary hover:bg-primary text-background font-bold py-4 px-8 rounded-lg shadow-md transition-all duration-300 group"
+                                className="inline-flex items-center justify-center bg-secondary hover:bg-primary text-background font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-lg shadow-md transition-all duration-300 group text-sm sm:text-base"
                             >
                                 {service.linkText}
                                 <ArrowRight className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" />

@@ -9,20 +9,22 @@ const ExperienceNav: React.FC = () => {
     const toggleNav = () => setIsOpen(!isOpen);
 
     const menuItems = [
-        { name: 'Architecture', path: '/services/software', desc: 'How we build scalable systems' },
-        { name: 'Talent Flow', path: '/services/hr', desc: 'Our unique HR optimization model' },
-        { name: 'Wealth Strategy', path: '/services/finance', desc: 'Finance consulting for the digital age' },
-        { name: 'Case Studies', path: '/case-studies', desc: 'Real-world impact' },
+        { name: 'Services', path: '/services', desc: 'Software, HR, and finance consulting' },
+        { name: 'Industries', path: '/industries', desc: 'Sectors we serve across the UK & globally' },
+        { name: 'Projects', path: '/projects', desc: 'Products engineered by our team' },
+        { name: 'About Infonix', path: '/about', desc: 'Who we are and what drives us' },
         { name: 'Contact Infonix', path: '/contact', desc: 'Let\'s start something' },
     ];
 
     return (
         <>
             {/* Pulse Toggle Button */}
-            <div className="fixed bottom-10 right-10 z-[60]">
+            <div className="fixed bottom-6 right-6 sm:bottom-10 sm:right-10 z-[60]">
                 <button
                     onClick={toggleNav}
-                    className="relative w-16 h-16 bg-secondary text-primary rounded-full flex items-center justify-center shadow-2xl group overflow-hidden"
+                    aria-label="Open quick navigation"
+                    aria-expanded={isOpen}
+                    className="relative w-14 h-14 sm:w-16 sm:h-16 bg-secondary text-primary rounded-full flex items-center justify-center shadow-2xl group overflow-hidden"
                 >
                     <motion.div
                         animate={{ scale: [1, 1.2, 1] }}
@@ -42,10 +44,10 @@ const ExperienceNav: React.FC = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="fixed inset-0 z-[55] bg-primary/95 backdrop-blur-2xl flex flex-col items-center justify-center px-6"
+                        className="fixed inset-0 z-[55] bg-primary/95 backdrop-blur-2xl flex flex-col items-center justify-center px-4 sm:px-6 py-20 overflow-y-auto"
                     >
-                        <div className="max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                            <div className="space-y-8">
+                        <div className="max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                            <div className="space-y-6 sm:space-y-8">
                                 <motion.div
                                     initial={{ opacity: 0, x: -50 }}
                                     animate={{ opacity: 1, x: 0 }}
@@ -54,7 +56,7 @@ const ExperienceNav: React.FC = () => {
                                     <h2 className="text-secondary text-sm font-black uppercase tracking-[0.3em] mb-4">
                                         The Infonix Experience
                                     </h2>
-                                    <h3 className="text-white text-5xl font-bold leading-tight">
+                                    <h3 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
                                         Navigating the <br /> <span className="text-secondary">Future of Work.</span>
                                     </h3>
                                 </motion.div>
@@ -80,7 +82,7 @@ const ExperienceNav: React.FC = () => {
                                             className="group flex flex-col space-y-1 p-4 rounded-2xl hover:bg-white/5 transition-colors border border-transparent hover:border-white/10"
                                         >
                                             <div className="flex items-center justify-between">
-                                                <span className="text-2xl font-bold text-white group-hover:text-secondary transition-colors underline-offset-8 group-hover:underline">
+                                                <span className="text-xl sm:text-2xl font-bold text-white group-hover:text-secondary transition-colors underline-offset-8 group-hover:underline">
                                                     {item.name}
                                                 </span>
                                                 <ArrowRight className="text-secondary opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all" />

@@ -16,7 +16,7 @@ const CoreServices: React.FC = () => {
                 <Cloud className="w-5 h-5" />,
                 <Settings className="w-5 h-5" />
             ],
-            link: "/services/software"
+            link: "/services"
         },
         {
             title: "HR & Talent Optimization",
@@ -27,7 +27,7 @@ const CoreServices: React.FC = () => {
                 <Shield className="w-5 h-5" />,
                 <BarChart className="w-5 h-5" />
             ],
-            link: "/services/hr"
+            link: "/services"
         },
         {
             title: "Financial Advisory & Planning",
@@ -38,18 +38,18 @@ const CoreServices: React.FC = () => {
                 <Settings className="w-5 h-5" />,
                 <Database className="w-5 h-5" />
             ],
-            link: "/services/finance"
+            link: "/services"
         }
     ];
 
     return (
-        <section className="py-24 bg-background border-t border-surface">
+        <section className="py-16 sm:py-20 lg:py-24 bg-background border-t border-surface">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold text-primary tracking-tight">
+                <div className="text-center mb-12 sm:mb-16">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary tracking-tight">
                         End-to-End Excellence
                     </h2>
-                    <h3 className="text-3xl md:text-4xl font-bold text-secondary mt-2">
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary mt-2">
                         Built Around Your Needs
                     </h3>
                 </div>
@@ -68,7 +68,7 @@ const CoreServices: React.FC = () => {
                         >
                             <Link
                                 to={service.link}
-                                className="group bg-surface rounded-2xl p-10 flex flex-col items-center justify-center text-center border border-accent shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_-4px_rgba(6,59,100,0.2)] transition-all duration-300 block relative overflow-hidden h-full"
+                                className="group bg-surface rounded-2xl p-6 sm:p-8 lg:p-10 flex flex-col items-center justify-center text-center border border-accent shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_-4px_rgba(6,59,100,0.2)] transition-all duration-300 block relative overflow-hidden h-full"
                             >
                                 <div className="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity">
                                     <div className="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center">
