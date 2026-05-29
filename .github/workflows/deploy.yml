@@ -22,9 +22,10 @@ jobs:
       - name: Deploy to Hostinger via SFTP
         uses: appleboy/scp-action@v0.1.7
         with:
-          host: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
+          host: 82.29.191.216
+          username: u265693817
           password: ${{ secrets.FTP_PASSWORD }}
+          port: 65002
           source: "./dist/*"
           target: "/home/u265693817/domains/infonixsolutions.co.uk/public_html"
           strip_components: 1
