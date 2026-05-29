@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Testimonials: React.FC = () => {
     const testimonials = [
@@ -29,11 +30,11 @@ const Testimonials: React.FC = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     return (
-        <section className="py-24 bg-background relative overflow-hidden">
+        <section className="py-16 sm:py-20 lg:py-24 bg-background relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div className="text-center mb-16">
+                <div className="text-center mb-12 sm:mb-16">
                     <h2 className="text-sm font-bold tracking-[0.2em] text-secondary uppercase mb-4">Client Stories</h2>
-                    <h3 className="text-4xl md:text-5xl font-bold text-primary">What Our Partners Say</h3>
+                    <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary">What Our Partners Say</h3>
                 </div>
 
                 <div className="max-w-6xl mx-auto">
@@ -50,17 +51,17 @@ const Testimonials: React.FC = () => {
                         </div>
 
                         {/* Right Side: Content */}
-                        <div className="p-10 md:p-16 flex flex-col justify-center">
-                            <h4 className="text-2xl lg:text-3xl font-bold text-primary mb-6 leading-snug">
+                        <div className="p-6 sm:p-10 md:p-16 flex flex-col justify-center">
+                            <h4 className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary mb-4 sm:mb-6 leading-snug">
                                 {testimonials[currentIndex].headline}
                             </h4>
-                            <p className="text-lg text-primary/80 italic mb-10 leading-relaxed font-medium">
+                            <p className="text-base sm:text-lg text-primary/80 italic mb-8 sm:mb-10 leading-relaxed font-medium">
                                 {testimonials[currentIndex].quote}
                             </p>
 
-                            <a href="#" className="inline-flex items-center text-secondary font-bold hover:text-primary transition-colors mb-12 uppercase text-sm tracking-wider">
-                                Read Case Study <ArrowRight className="w-4 h-4 ml-2" />
-                            </a>
+                            <Link to="/projects" className="inline-flex items-center text-secondary font-bold hover:text-primary transition-colors mb-12 uppercase text-sm tracking-wider">
+                                See Our Work <ArrowRight className="w-4 h-4 ml-2" />
+                            </Link>
 
                             <div className="flex items-center justify-between mt-auto">
                                 <div className="flex items-center gap-4">

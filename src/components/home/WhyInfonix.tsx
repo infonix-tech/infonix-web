@@ -18,18 +18,18 @@ const WhyInfonix: React.FC = () => {
 
     return (
         <>
-            <section className="py-24 bg-background overflow-hidden relative border-t border-surface">
+            <section className="py-16 sm:py-20 lg:py-24 bg-background overflow-hidden relative border-t border-surface">
                 {/* Background decorative elements */}
                 <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-secondary/5 blur-3xl"></div>
                 <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-72 h-72 rounded-full bg-secondary/10 blur-3xl"></div>
 
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
                         <div>
                             <h2 className="text-sm font-black tracking-[0.3em] text-secondary uppercase mb-4">Why Choose Us</h2>
-                            <h3 className="text-4xl md:text-5xl font-bold text-primary mb-8 tracking-tight">Built on Trust & Expertise</h3>
-                            <p className="text-primary/70 text-lg mb-10 leading-relaxed font-medium">
+                            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-6 sm:mb-8 tracking-tight">Built on Trust & Expertise</h3>
+                            <p className="text-primary/70 text-base sm:text-lg mb-8 sm:mb-10 leading-relaxed font-medium">
                                 We don't just provide services; we build lasting partnerships. Our approach is grounded in transparency, deep industry knowledge, and a relentless focus on delivering measurable outcomes.
                             </p>
 
@@ -73,11 +73,11 @@ const WhyInfonix: React.FC = () => {
             </section>
 
             {/* How We Work Section */}
-            <section className="py-24 bg-surface">
+            <section className="py-16 sm:py-20 lg:py-24 bg-surface">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-20">
+                    <div className="text-center mb-12 sm:mb-16 lg:mb-20">
                         <h2 className="text-sm font-bold tracking-widest text-secondary uppercase mb-3">Our Process</h2>
-                        <h3 className="text-4xl md:text-5xl font-bold text-primary">How We Work</h3>
+                        <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary">How We Work</h3>
                         <div className="mt-4 w-24 h-1 bg-secondary mx-auto"></div>
                     </div>
 
@@ -85,7 +85,7 @@ const WhyInfonix: React.FC = () => {
                         {/* Timeline Line */}
                         <div className="hidden lg:block absolute top-1/2 left-0 w-full h-1 bg-accent/30 -translate-y-1/2 z-0"></div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 relative z-10">
                             {processSteps.map((step, i) => (
                                 <div key={i} className="flex flex-col items-center text-center group">
                                     <div className="w-20 h-20 bg-background rounded-2xl shadow-lg border-2 border-surface flex items-center justify-center mb-6 relative group-hover:border-secondary transition-colors duration-300 z-10">

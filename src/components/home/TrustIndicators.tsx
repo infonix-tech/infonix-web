@@ -40,10 +40,10 @@ const TrustIndicators: React.FC = () => {
     ];
 
     return (
-        <section className="py-24 bg-background overflow-hidden">
+        <section className="py-16 sm:py-20 lg:py-24 bg-background overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold text-primary tracking-tight">
+                <div className="text-center mb-12 sm:mb-16">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary tracking-tight">
                         Why companies like yours, <span className="text-secondary">Trust us</span>
                     </h2>
                 </div>
@@ -55,7 +55,7 @@ const TrustIndicators: React.FC = () => {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="lg:col-span-5 h-[650px] rounded-[2.5rem] overflow-hidden relative shadow-2xl group border border-surface"
+                        className="lg:col-span-5 h-[400px] sm:h-[500px] lg:h-[650px] rounded-3xl lg:rounded-[2.5rem] overflow-hidden relative shadow-2xl group border border-surface"
                     >
                         <div className="absolute inset-0 bg-secondary/5 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
                         <motion.img
@@ -64,7 +64,7 @@ const TrustIndicators: React.FC = () => {
                             alt="Team Collaboration"
                             className="w-full h-full object-cover transform transition-transform duration-700"
                         />
-                        <div className="absolute bottom-10 left-10 z-20 bg-background/90 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-xl max-w-[280px]">
+                        <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10 z-20 bg-background/90 backdrop-blur-md p-4 sm:p-6 rounded-2xl border border-white/20 shadow-xl max-w-[280px]">
                             <p className="text-primary font-bold text-lg mb-1">UK & Global</p>
                             <p className="text-primary/60 text-sm">Consulting expertise delivered with a local touch and global scale.</p>
                         </div>

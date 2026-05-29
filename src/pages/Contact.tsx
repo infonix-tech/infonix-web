@@ -1,12 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Linkedin, Map } from 'lucide-react';
+import { MapPin, Phone, Mail, Linkedin } from 'lucide-react';
+import { useSEO } from '../hooks/useSEO';
 
 const Contact: React.FC = () => {
+    useSEO({
+        title: 'Contact Us',
+        description:
+            "Get in touch with Infonix Solutions. Call 01244 840089 or email hr@infonixsolutions.co.uk — our team in Chester is ready to help with your consulting needs.",
+        path: '/contact',
+    });
+
     return (
         <div className="pt-20">
             {/* Hero Section */}
-            <section className="bg-primary text-surface py-20 px-4 sm:px-6 lg:px-8">
+            <section className="bg-primary text-surface py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -14,10 +22,10 @@ const Contact: React.FC = () => {
                         transition={{ duration: 0.6 }}
                     >
                         <h2 className="text-secondary font-bold tracking-widest uppercase mb-4 text-sm">Contact Us</h2>
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6">
                             Let's Start a Conversation
                         </h1>
-                        <p className="text-lg text-surface/80 max-w-2xl">
+                        <p className="text-base sm:text-lg text-surface/80 max-w-2xl">
                             Have a project in mind or need consulting support? We'd love to hear from you.
                         </p>
                     </motion.div>
@@ -25,15 +33,15 @@ const Contact: React.FC = () => {
             </section>
 
             {/* Main Content */}
-            <section className="bg-background py-16 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <section className="bg-background py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+                <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
                     {/* Form Component (Left) */}
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="bg-white p-8 rounded-2xl shadow-xl border border-surface"
+                        className="bg-white p-6 sm:p-8 rounded-2xl shadow-xl border border-surface"
                     >
                         <form className="space-y-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -65,7 +73,7 @@ const Contact: React.FC = () => {
                                         </select>
                                         <input
                                             type="tel"
-                                            placeholder="7736 749941"
+                                            placeholder="1244 840089"
                                             className="w-full px-4 py-3 rounded-r-lg border border-gray-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all"
                                         />
                                     </div>
@@ -92,7 +100,7 @@ const Contact: React.FC = () => {
 
                             <button
                                 type="button"
-                                className="w-full md:w-auto bg-secondary hover:bg-primary text-background font-bold py-4 px-10 rounded-lg transition-colors duration-300 shadow-lg flex items-center justify-center gap-2"
+                                className="w-full md:w-auto bg-secondary hover:bg-primary text-background font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-lg transition-colors duration-300 shadow-lg flex items-center justify-center gap-2"
                             >
                                 Send Message
                             </button>
@@ -126,7 +134,7 @@ const Contact: React.FC = () => {
                                 </div>
                                 <div>
                                     <p className="font-semibold text-primary">Phone</p>
-                                    <p className="text-primary/70 mt-1">+44 7736 749941</p>
+                                    <a href="tel:+441244840089" className="text-primary/70 hover:text-secondary transition-colors mt-1 inline-block">01244 840089</a>
                                 </div>
                             </div>
 
@@ -151,13 +159,27 @@ const Contact: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* Map Placeholder */}
-                        <div className="w-full h-64 bg-surface rounded-2xl border border-accent overflow-hidden relative group">
-                            <div className="absolute inset-0 flex flex-col items-center justify-center text-primary/50 group-hover:text-primary/80 transition-colors">
-                                <Map className="w-12 h-12 mb-3 text-secondary" />
-                                <span className="font-semibold">Interactive Map (Chester)</span>
-                            </div>
+                        {/* Live Map */}
+                        <div className="w-full h-64 sm:h-72 bg-surface rounded-2xl border border-accent overflow-hidden shadow-md">
+                            <iframe
+                                title="Infonix Solutions office location — 4 Chantry Court, Chester West Employment Park, Chester, CH1 4QN"
+                                src="https://www.google.com/maps?q=4%20Chantry%20Court%2C%20Chester%20West%20Employment%20Park%2C%20Chester%2C%20CH1%204QN&z=16&output=embed"
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0 }}
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                allowFullScreen
+                            />
                         </div>
+                        <a
+                            href="https://www.google.com/maps/dir/?api=1&destination=4+Chantry+Court%2C+Chester+West+Employment+Park%2C+Chester%2C+CH1+4QN"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-3 inline-flex items-center justify-center text-sm font-bold text-secondary hover:text-primary transition-colors"
+                        >
+                            Get directions →
+                        </a>
                     </motion.div>
                 </div>
             </section>

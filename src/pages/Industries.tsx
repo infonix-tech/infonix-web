@@ -2,8 +2,16 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Laptop, Landmark, HeartPulse, ShoppingCart, Factory, GraduationCap, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useSEO } from '../hooks/useSEO';
 
 const Industries: React.FC = () => {
+    useSEO({
+        title: 'Industries We Serve',
+        description:
+            'Tailored consulting across technology, finance, healthcare, retail, manufacturing, and education — bridging talent and technology for every sector.',
+        path: '/industries',
+    });
+
     const industriesData = [
         {
             title: "Technology",
@@ -40,7 +48,7 @@ const Industries: React.FC = () => {
     return (
         <div className="pt-20">
             {/* Hero Section */}
-            <section className="bg-primary text-surface py-20 px-4 sm:px-6 lg:px-8">
+            <section className="bg-primary text-surface py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -49,10 +57,10 @@ const Industries: React.FC = () => {
                         className="max-w-3xl"
                     >
                         <h2 className="text-secondary font-bold tracking-widest uppercase mb-4 text-sm">Industries</h2>
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6">
                             Industries We Serve
                         </h1>
-                        <p className="text-lg text-surface/80">
+                        <p className="text-base sm:text-lg text-surface/80">
                             We bridge talent and technology across diverse sectors, delivering tailored consulting solutions for every industry.
                         </p>
                     </motion.div>
@@ -60,9 +68,9 @@ const Industries: React.FC = () => {
             </section>
 
             {/* Cards Section */}
-            <section className="bg-background py-20 px-4 sm:px-6 lg:px-8">
+            <section className="bg-background py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                         {industriesData.map((ind, idx) => (
                             <motion.div
                                 key={idx}
@@ -70,12 +78,12 @@ const Industries: React.FC = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                                className="bg-white p-10 rounded-2xl shadow-lg border border-surface hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+                                className="bg-white p-6 sm:p-8 lg:p-10 rounded-2xl shadow-lg border border-surface hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
                             >
-                                <div className="mb-6 w-16 h-16 rounded-full bg-surface/50 text-secondary flex items-center justify-center group-hover:bg-secondary group-hover:text-background transition-colors duration-300">
+                                <div className="mb-6 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-surface/50 text-secondary flex items-center justify-center group-hover:bg-secondary group-hover:text-background transition-colors duration-300">
                                     {ind.icon}
                                 </div>
-                                <h3 className="text-2xl font-serif font-bold text-primary mb-4">{ind.title}</h3>
+                                <h3 className="text-xl sm:text-2xl font-serif font-bold text-primary mb-4">{ind.title}</h3>
                                 <p className="text-primary/70 leading-relaxed">
                                     {ind.description}
                                 </p>
@@ -86,7 +94,7 @@ const Industries: React.FC = () => {
             </section>
 
             {/* CTA Section */}
-            <section className="bg-primary py-24 px-4 sm:px-6 lg:px-8 text-center border-t border-surface/20">
+            <section className="bg-primary py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 text-center border-t border-surface/20">
                 <div className="max-w-3xl mx-auto">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
@@ -94,15 +102,15 @@ const Industries: React.FC = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-6">
+                        <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif font-bold text-white mb-6">
                             Don't See Your Industry?
                         </h2>
-                        <p className="text-lg text-surface/80 mb-10 leading-relaxed">
+                        <p className="text-base sm:text-lg text-surface/80 mb-8 sm:mb-10 leading-relaxed">
                             Our consulting expertise extends beyond the sectors listed. Get in touch to discuss your specific needs.
                         </p>
                         <Link
                             to="/contact"
-                            className="inline-flex items-center justify-center bg-secondary hover:bg-white hover:text-primary text-background font-bold py-4 px-10 rounded-full transition-all duration-300 shadow-lg"
+                            className="inline-flex items-center justify-center bg-secondary hover:bg-white hover:text-primary text-background font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-full transition-all duration-300 shadow-lg"
                         >
                             Let's Talk
                             <ArrowRight className="ml-2 w-5 h-5" />
