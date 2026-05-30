@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ArrowRight, Github, Linkedin, Twitter } from 'lucide-react';
+import { X, ArrowRight, Linkedin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const ExperienceNav: React.FC = () => {
@@ -9,8 +9,8 @@ const ExperienceNav: React.FC = () => {
     const toggleNav = () => setIsOpen(!isOpen);
 
     const menuItems = [
-        { name: 'Services', path: '/services', desc: 'Software, HR, and finance consulting' },
-        { name: 'Industries', path: '/industries', desc: 'Sectors we serve across the UK & globally' },
+        { name: 'Services', path: '/services', desc: 'Websites, AI chatbots, automation, and more' },
+        { name: 'Industries', path: '/industries', desc: 'Sectors we serve worldwide' },
         { name: 'Projects', path: '/projects', desc: 'Products engineered by our team' },
         { name: 'About Infonix', path: '/about', desc: 'Who we are and what drives us' },
         { name: 'Contact Infonix', path: '/contact', desc: 'Let\'s start something' },
@@ -62,9 +62,7 @@ const ExperienceNav: React.FC = () => {
                                 </motion.div>
 
                                 <div className="flex space-x-6">
-                                    <a href="#" className="text-white/50 hover:text-secondary transition-colors"><Linkedin size={24} /></a>
-                                    <a href="#" className="text-white/50 hover:text-secondary transition-colors"><Twitter size={24} /></a>
-                                    <a href="#" className="text-white/50 hover:text-secondary transition-colors"><Github size={24} /></a>
+                                    <a href="https://www.linkedin.com/company/105996236" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-secondary transition-colors" aria-label="Infonix Solutions on LinkedIn"><Linkedin size={24} /></a>
                                 </div>
                             </div>
 

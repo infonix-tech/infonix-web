@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin } from 'lucide-react';
 
 const Footer: React.FC = () => {
     return (
@@ -14,12 +14,10 @@ const Footer: React.FC = () => {
                             Infonix<span className="text-secondary">.</span>
                         </Link>
                         <p className="text-sm leading-relaxed text-surface/80 font-medium">
-                            A UK-based consulting firm delivering expertise in software engineering, human resources, and financial advisory.
+                            A UK-based digital agency delivering websites, AI chatbots, and automation for businesses worldwide. Headquartered in Chester since 2018.
                         </p>
                         <div className="flex space-x-5">
-                            <a href="#" className="p-2 rounded-xl bg-white/5 text-surface/80 hover:text-secondary hover:bg-secondary/10 transition-all"><Linkedin size={20} /></a>
-                            <a href="#" className="p-2 rounded-xl bg-white/5 text-surface/80 hover:text-secondary hover:bg-secondary/10 transition-all"><Twitter size={20} /></a>
-                            <a href="#" className="p-2 rounded-xl bg-white/5 text-surface/80 hover:text-secondary hover:bg-secondary/10 transition-all"><Facebook size={20} /></a>
+                            <a href="https://www.linkedin.com/company/105996236" target="_blank" rel="noopener noreferrer" className="p-2 rounded-xl bg-white/5 text-surface/80 hover:text-secondary hover:bg-secondary/10 transition-all" aria-label="Infonix Solutions on LinkedIn"><Linkedin size={20} /></a>
                         </div>
                     </div>
 
@@ -39,9 +37,10 @@ const Footer: React.FC = () => {
                     <div>
                         <h4 className="text-white text-sm font-black uppercase tracking-[0.2em] mb-8">Services</h4>
                         <ul className="space-y-4">
-                            <li><Link to="/services" className="text-sm font-bold text-surface/80 hover:text-secondary transition-colors uppercase tracking-widest">Software Engineering</Link></li>
-                            <li><Link to="/services" className="text-sm font-bold text-surface/80 hover:text-secondary transition-colors uppercase tracking-widest">HR Consulting</Link></li>
-                            <li><Link to="/services" className="text-sm font-bold text-surface/80 hover:text-secondary transition-colors uppercase tracking-widest">Finance Planning</Link></li>
+                            <li><Link to="/services" className="text-sm font-bold text-surface/80 hover:text-secondary transition-colors uppercase tracking-widest">Website Design</Link></li>
+                            <li><Link to="/services" className="text-sm font-bold text-surface/80 hover:text-secondary transition-colors uppercase tracking-widest">AI Chatbots</Link></li>
+                            <li><Link to="/services" className="text-sm font-bold text-surface/80 hover:text-secondary transition-colors uppercase tracking-widest">AI Automation</Link></li>
+                            <li><Link to="/services" className="text-sm font-bold text-surface/80 hover:text-secondary transition-colors uppercase tracking-widest">Rescue Projects</Link></li>
                         </ul>
                     </div>
 
@@ -65,8 +64,8 @@ const Footer: React.FC = () => {
                                 <div className="p-2 rounded-xl bg-secondary/10 mr-4">
                                     <Mail size={18} className="text-secondary" />
                                 </div>
-                                <a href="mailto:hr@infonixsolutions.co.uk" className="text-surface/80 font-bold hover:text-secondary transition-colors">
-                                    hr@infonixsolutions.co.uk
+                                <a href="mailto:hello@infonixsolutions.co.uk" className="text-surface/80 font-bold hover:text-secondary transition-colors">
+                                    hello@infonixsolutions.co.uk
                                 </a>
                             </li>
                         </ul>

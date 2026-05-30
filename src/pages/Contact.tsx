@@ -5,9 +5,9 @@ import { useSEO } from '../hooks/useSEO';
 
 const Contact: React.FC = () => {
     useSEO({
-        title: 'Contact Us',
+        title: 'Contact Us — Get a Free Quote | Infonix Solutions',
         description:
-            "Get in touch with Infonix Solutions. Call 01244 840089 or email hr@infonixsolutions.co.uk — our team in Chester is ready to help with your consulting needs.",
+            "Get in touch with Infonix Solutions. Call 01244 840089 or email hello@infonixsolutions.co.uk — our Chester-based team delivers websites, AI chatbots, and automation for businesses worldwide.",
         path: '/contact',
     });
 
@@ -23,10 +23,10 @@ const Contact: React.FC = () => {
                     >
                         <h2 className="text-secondary font-bold tracking-widest uppercase mb-4 text-sm">Contact Us</h2>
                         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6">
-                            Let's Start a Conversation
+                            Let's Build Something Together
                         </h1>
                         <p className="text-base sm:text-lg text-surface/80 max-w-2xl">
-                            Have a project in mind or need consulting support? We'd love to hear from you.
+                            Tell us about your project. We'll ask a few simple questions and recommend the right solution for your business and your budget — no jargon, no obligation.
                         </p>
                     </motion.div>
                 </div>
@@ -54,10 +54,10 @@ const Contact: React.FC = () => {
                                     />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-semibold text-primary mb-2">Email Address *</label>
+                                    <label className="block text-sm font-semibold text-primary mb-2">Business Name</label>
                                     <input
-                                        type="email"
-                                        placeholder="john@example.com"
+                                        type="text"
+                                        placeholder="Your Business Ltd"
                                         className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all"
                                     />
                                 </div>
@@ -65,28 +65,35 @@ const Contact: React.FC = () => {
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
-                                    <label className="block text-sm font-semibold text-primary mb-2">Phone Number</label>
-                                    <div className="flex">
-                                        <select className="px-4 py-3 rounded-l-lg border border-gray-200 border-r-0 bg-gray-50 focus:outline-none text-primary">
-                                            <option>UK (+44)</option>
-                                            <option>US (+1)</option>
-                                        </select>
-                                        <input
-                                            type="tel"
-                                            placeholder="1244 840089"
-                                            className="w-full px-4 py-3 rounded-r-lg border border-gray-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all"
-                                        />
-                                    </div>
+                                    <label className="block text-sm font-semibold text-primary mb-2">Email Address *</label>
+                                    <input
+                                        type="email"
+                                        placeholder="john@example.com"
+                                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all"
+                                    />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-semibold text-primary mb-2">Service of Interest *</label>
-                                    <select className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all bg-white text-primary appearance-none">
-                                        <option>Select a service</option>
-                                        <option>Software Consulting</option>
-                                        <option>HR Consulting</option>
-                                        <option>Finance Consulting</option>
-                                    </select>
+                                    <label className="block text-sm font-semibold text-primary mb-2">Phone Number</label>
+                                    <input
+                                        type="tel"
+                                        placeholder="01234 567890"
+                                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all"
+                                    />
                                 </div>
+                            </div>
+
+                            <div>
+                                <label className="block text-sm font-semibold text-primary mb-2">Service of Interest *</label>
+                                <select className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all bg-white text-primary appearance-none">
+                                    <option>Select a service</option>
+                                    <option>Website Design &amp; Development</option>
+                                    <option>AI Chatbot</option>
+                                    <option>AI Automation</option>
+                                    <option>Rescue &amp; Completion Project</option>
+                                    <option>Local SEO</option>
+                                    <option>Custom Software &amp; Product Engineering</option>
+                                    <option>Not sure — I need advice</option>
+                                </select>
                             </div>
 
                             <div>
@@ -144,7 +151,7 @@ const Contact: React.FC = () => {
                                 </div>
                                 <div>
                                     <p className="font-semibold text-primary">Email</p>
-                                    <p className="text-secondary hover:text-primary transition-colors mt-1 cursor-pointer">hr@infonixsolutions.co.uk</p>
+                                    <a href="mailto:hello@infonixsolutions.co.uk" className="text-secondary hover:text-primary transition-colors mt-1 inline-block">hello@infonixsolutions.co.uk</a>
                                 </div>
                             </div>
 
@@ -154,7 +161,7 @@ const Contact: React.FC = () => {
                                 </div>
                                 <div>
                                     <p className="font-semibold text-primary">LinkedIn</p>
-                                    <p className="text-secondary hover:text-primary transition-colors mt-1 cursor-pointer">Infonix Solutions</p>
+                                    <a href="https://www.linkedin.com/company/105996236" target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-primary transition-colors mt-1 inline-block">Infonix Solutions</a>
                                 </div>
                             </div>
                         </div>

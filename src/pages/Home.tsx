@@ -13,17 +13,17 @@ import heroVideo from '../assets/Website_hero_video.mp4';
 
 const Home: React.FC = () => {
     useSEO({
-        title: 'UK Consulting in Software, HR & Finance',
+        title: 'Websites, AI Chatbots & Automation for Businesses | Infonix Solutions',
         description:
-            'Infonix Solutions is a UK-based consulting firm delivering premium software engineering, HR, and financial advisory services with scalable teams and proven outcomes.',
+            'Infonix Solutions builds modern websites, AI chatbots, and automation tools for businesses worldwide. Headquartered in Chester, UK. Get a free quote today.',
         path: '/',
         keywords: [
             'Infonix Solutions',
-            'UK consulting',
-            'software engineering',
-            'HR consulting',
-            'finance consulting',
-            'technology consulting',
+            'web design',
+            'AI chatbot for small business',
+            'website design Chester',
+            'AI automation',
+            'web design agency',
         ],
     });
 
@@ -58,9 +58,9 @@ const Home: React.FC = () => {
     const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
     const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.9]);
 
-    const headline = "Digital Excellence";
-    const poweredBy = "Powered By";
-    const company = "Infonix Solutions";
+    const headline = "We Build Modern Websites,";
+    const poweredBy = "AI Tools & Chatbots";
+    const company = "for Your Business";
 
     const letterVariants = {
         hidden: { opacity: 0, y: 20 },
@@ -187,24 +187,33 @@ const Home: React.FC = () => {
                         transition={{ duration: 0.8, delay: 2.2 }}
                         className="text-base sm:text-lg md:text-xl text-gray-500 mb-8 sm:mb-10 max-w-2xl font-bold drop-shadow-[0_1px_5px_rgba(255,255,255,0.8)] px-2"
                     >
-                        Extend your capabilities with premium UK consulting talent in Software Engineering, HR, and Finance.
+                        From sole traders to growing companies — we help businesses get found online, automate customer enquiries, and grow without hiring extra staff. Headquartered in Chester, UK. Delivering worldwide.
                     </motion.p>
 
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.5, delay: 2.5 }}
+                        className="flex flex-col sm:flex-row gap-4 items-center"
                     >
                         <Magnetic>
                             <motion.a
                                 href="/contact"
                                 whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(6, 59, 100, 0.3)" }}
                                 whileTap={{ scale: 0.98 }}
-                                className="inline-block bg-secondary hover:bg-primary text-background font-extrabold py-4 px-8 sm:py-5 sm:px-14 rounded-full transition-colors duration-300 shadow-xl text-base sm:text-lg uppercase tracking-wider"
+                                className="inline-block bg-secondary hover:bg-primary text-background font-extrabold py-4 px-8 sm:py-5 sm:px-12 rounded-full transition-colors duration-300 shadow-xl text-base sm:text-lg uppercase tracking-wider"
                             >
-                                Start Transforming Today
+                                Get a Free Quote
                             </motion.a>
                         </Magnetic>
+                        <motion.a
+                            href="/projects"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.98 }}
+                            className="inline-block border-2 border-secondary text-secondary hover:bg-secondary hover:text-background font-extrabold py-4 px-8 sm:py-5 sm:px-12 rounded-full transition-colors duration-300 text-base sm:text-lg uppercase tracking-wider"
+                        >
+                            See Our Work
+                        </motion.a>
                     </motion.div>
                 </motion.div>
             </section>
