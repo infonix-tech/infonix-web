@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Phone, Linkedin } from 'lucide-react';
 import { motion, useScroll } from 'framer-motion';
 
 const navLinks = [
@@ -66,7 +66,7 @@ const Navbar: React.FC = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center space-x-8 xl:space-x-10">
+        <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
           {navLinks
             .filter((l) => l.name !== 'Home' && l.name !== 'Contact')
             .map((link) => (
@@ -74,6 +74,25 @@ const Navbar: React.FC = () => {
                 {link.name}
               </NavLink>
             ))}
+
+          <a
+            href="tel:+441244840089"
+            className="flex items-center gap-1.5 text-sm font-bold text-primary hover:text-secondary transition-colors"
+            aria-label="Call Infonix Solutions"
+          >
+            <Phone className="w-4 h-4" />
+            01244 840089
+          </a>
+
+          <a
+            href="https://www.linkedin.com/company/105996236"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:text-secondary transition-colors"
+            aria-label="Infonix Solutions on LinkedIn"
+          >
+            <Linkedin className="w-5 h-5" />
+          </a>
 
           <Link
             to="/contact"
