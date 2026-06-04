@@ -10,8 +10,9 @@ const Footer: React.FC = () => {
 
                     {/* Company Info */}
                     <div className="space-y-6">
-                        <Link to="/" className="text-3xl font-black text-white inline-block uppercase tracking-tighter">
-                            Infonix<span className="text-secondary">.</span>
+                        <Link to="/" className="inline-block">
+                            <span className="block text-3xl font-black text-white uppercase tracking-tighter">Infonix</span>
+                            <span className="block text-xs font-bold tracking-[0.25em] text-secondary uppercase">Solutions</span>
                         </Link>
                         <p className="text-sm leading-relaxed text-surface/80 font-medium">
                             A UK-based digital agency delivering websites, AI chatbots, and automation for businesses worldwide. Headquartered in Chester since 2018.

@@ -60,9 +60,10 @@ const Navbar: React.FC = () => {
             <div className="w-8 h-8 bg-secondary rounded-lg rotate-12 group-hover:rotate-0 transition-transform duration-300 flex items-center justify-center">
               <div className="w-4 h-4 bg-background rounded-sm"></div>
             </div>
-            <span className="ml-3 text-xl sm:text-2xl font-bold tracking-tight text-primary uppercase">
-              Infonix<span className="text-secondary">.</span>
-            </span>
+            <div className="ml-3 flex flex-col leading-none">
+              <span className="text-xl sm:text-2xl font-bold tracking-tight text-primary uppercase">Infonix</span>
+              <span className="text-[0.55rem] sm:text-xs font-bold tracking-[0.25em] text-secondary uppercase">Solutions</span>
+            </div>
           </div>
         </Link>
 
