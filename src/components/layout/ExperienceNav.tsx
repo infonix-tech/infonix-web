@@ -12,6 +12,7 @@ const ExperienceNav: React.FC = () => {
         { name: 'Services', path: '/services', desc: 'Websites, AI chatbots, automation, and more' },
         { name: 'Industries', path: '/industries', desc: 'Sectors we serve worldwide' },
         { name: 'Projects', path: '/projects', desc: 'Products engineered by our team' },
+        { name: 'Blog', path: '/blog', desc: 'Practical advice for growing businesses' },
         { name: 'About Infonix', path: '/about', desc: 'Who we are and what drives us' },
         { name: 'Contact Infonix', path: '/contact', desc: 'Let\'s start something' },
     ];
