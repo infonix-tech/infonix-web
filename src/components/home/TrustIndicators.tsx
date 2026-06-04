@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, ShieldCheck, Globe, Star } from 'lucide-react';
+import { TrendingUp, Users, Globe, Layers } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Magnetic } from '../common/Magnetic';
 
@@ -9,34 +9,33 @@ const TrustIndicators: React.FC = () => {
 
     const cards = [
         {
-            icon: Award,
-            title: "A WIDE RANGE OF SERVICES",
-            desc: "From product engineering and cloud migration to AI solutions and financial consultancy, our teams cover the full spectrum of technology services. This breadth allows us to scale and adapt to your evolving business needs.",
-            primary: true,
+            icon: TrendingUp,
+            title: 'Results You Can Measure',
+            desc: 'We track enquiries, keyword rankings, and traffic so you can see exactly what your investment is returning. Monthly plain-English reports — no jargon, no guesswork.',
             initialX: -100,
-            initialY: -100
+            initialY: -100,
         },
         {
-            icon: Star,
-            title: "Premium Talent",
-            desc: "Gain access to the UK & global talent pool including developers, architects, QAs, Data Engineers and more. We collaborate closely with you to vet and match each role to your specific operational needs.",
+            icon: Users,
+            title: 'A Team of 20, Not One Person',
+            desc: 'You get the reliability of an established agency with the personal attention of a dedicated team. UK-managed and globally delivered — 20 specialists across the UK, India, and Sri Lanka.',
             initialX: 100,
-            initialY: -100
+            initialY: -100,
         },
         {
             icon: Globe,
-            title: "Seamless Scalability",
-            desc: "Start with a single specialist or build a dedicated team overnight. Our flexible model ensures you can scale quickly without getting tangled in administrative overheads or long-term constraints.",
+            title: 'Built for Real Businesses',
+            desc: 'We work with sole traders, local businesses, and growing companies — not just large corporations. Our prices and processes are designed to work for independent businesses.',
             initialX: -100,
-            initialY: 100
+            initialY: 100,
         },
         {
-            icon: ShieldCheck,
-            title: "Security & Compliance",
-            desc: "Your data and systems are protected by rigorous, internationally recognised practices. We adhere to top regulatory standards and conduct regular security audits to ensure absolute peace of mind.",
+            icon: Layers,
+            title: 'From Website to Full Automation',
+            desc: 'Whether you need a 5-page website or a complete automation suite with AI chatbots and HR tools — we deliver it end-to-end under one roof, at a price that works for you.',
             initialX: 100,
-            initialY: 100
-        }
+            initialY: 100,
+        },
     ];
 
     return (
@@ -44,7 +43,7 @@ const TrustIndicators: React.FC = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-12 sm:mb-16">
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary tracking-tight">
-                        Why companies like yours, <span className="text-secondary">Trust us</span>
+                        Why businesses choose <span className="text-secondary">Infonix Solutions</span>
                     </h2>
                 </div>
 
@@ -61,12 +60,12 @@ const TrustIndicators: React.FC = () => {
                         <motion.img
                             style={{ y: yParallax, scale: 1.15 }}
                             src="/sketch-hero.png"
-                            alt="Team Collaboration"
+                            alt="Infonix Solutions team at work"
                             className="w-full h-full object-cover transform transition-transform duration-700"
                         />
                         <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10 z-20 bg-background/90 backdrop-blur-md p-4 sm:p-6 rounded-2xl border border-white/20 shadow-xl max-w-[280px]">
-                            <p className="text-primary font-bold text-lg mb-1">UK & Global</p>
-                            <p className="text-primary/60 text-sm">Consulting expertise delivered with a local touch and global scale.</p>
+                            <p className="text-primary font-bold text-lg mb-1">Chester-based. Worldwide clients.</p>
+                            <p className="text-primary/60 text-sm">Delivering digital solutions for businesses globally since 2018.</p>
                         </div>
                     </motion.div>
 
@@ -79,10 +78,10 @@ const TrustIndicators: React.FC = () => {
                                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{
-                                        type: "spring",
+                                        type: 'spring',
                                         damping: 20,
                                         stiffness: 100,
-                                        delay: index * 0.1
+                                        delay: index * 0.1,
                                     }}
                                     className="group bg-surface rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-center border border-accent h-full transition-all duration-500 hover:bg-primary hover:border-primary shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_rgba(6,59,100,0.3)]"
                                 >

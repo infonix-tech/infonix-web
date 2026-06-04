@@ -74,7 +74,7 @@ const projects: Project[] = [
 
 const Projects: React.FC = () => {
     useSEO({
-        title: 'Our Projects',
+        title: 'Our Work — Swiftly, GiftGrow & More',
         description:
             'Selected products engineered by Infonix Solutions — Swiftly, GiftGrow, HighStreetDeals, and Autism Connect Hub. From on-demand logistics to inclusive community platforms.',
         path: '/projects',
@@ -134,9 +134,6 @@ const Projects: React.FC = () => {
                                     <div className="mb-4 sm:mb-6 w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-secondary text-background flex items-center justify-center shadow-lg">
                                         {project.icon}
                                     </div>
-                                    <span className="text-xs font-black uppercase tracking-[0.25em] text-secondary mb-2">
-                                        0{idx + 1} · Project
-                                    </span>
                                     <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary leading-tight mb-3">
                                         {project.name}
                                     </h3>

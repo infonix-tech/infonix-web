@@ -88,7 +88,7 @@ const Blog: React.FC = () => {
                                 to="/contact"
                                 className="inline-flex items-center gap-2 text-secondary hover:text-primary font-semibold transition-colors mt-2 text-sm"
                             >
-                                Read More <ArrowRight className="w-4 h-4" />
+                                Discuss this with us <ArrowRight className="w-4 h-4" />
                             </Link>
                         </motion.article>
                     ))}

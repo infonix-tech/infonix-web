@@ -13,7 +13,7 @@ import heroVideo from '../assets/Website_hero_video.mp4';
 
 const Home: React.FC = () => {
     useSEO({
-        title: 'Websites, AI Chatbots & Automation for Businesses | Infonix Solutions',
+        title: 'Websites, AI Chatbots & Automation for Businesses',
         description:
             'Infonix Solutions builds modern websites, AI chatbots, and automation tools for businesses worldwide. Headquartered in Chester, UK. Get a free quote today.',
         path: '/',
