@@ -4,6 +4,18 @@ import { Monitor, MessageSquareMore, Zap, Wrench, Code, MapPin, ArrowRight, Chec
 import { Link } from 'react-router-dom';
 import { useSEO } from '../hooks/useSEO';
 
+interface SubSectionGroup {
+    title: string;
+    bullets: string[];
+}
+
+interface SubSection {
+    title: string;
+    note?: string;
+    bullets?: string[];
+    groups?: SubSectionGroup[];
+}
+
 interface ServiceItem {
     id: string;
     icon: React.ReactNode;
@@ -13,6 +25,19 @@ interface ServiceItem {
     whoFor: string;
     pricing: string;
     ctaLabel: string;
+    subSections?: SubSection[];
+}
+
+function BulletText({ text }: { text: string }) {
+    const sep = ' — ';
+    const idx = text.indexOf(sep);
+    if (idx === -1) return <span className="text-primary/70">{text}</span>;
+    return (
+        <span>
+            <strong className="font-semibold text-primary">{text.slice(0, idx)}</strong>
+            <span className="text-primary/70"> — {text.slice(idx + sep.length)}</span>
+        </span>
+    );
 }
 
 const Services: React.FC = () => {
@@ -47,6 +72,31 @@ const Services: React.FC = () => {
             whoFor: 'Sole traders, local businesses, restaurants, salons, tradespeople, gyms, retailers, and anyone who currently has no website or an outdated one.',
             pricing: 'From £399',
             ctaLabel: 'Get a Quote for Your Website',
+            subSections: [
+                {
+                    title: 'Digital Marketing',
+                    bullets: [
+                        'Google Ads management — targeted campaigns that put your business in front of people actively searching for your services',
+                        'Social media advertising across Facebook, Instagram, and LinkedIn — reaching your exact customer profile',
+                        'Google Business Profile optimisation — ensures your business appears in local search results and Google Maps',
+                        'Email marketing automation — re-engage past customers and nurture new leads without manual effort',
+                        'Content marketing — blog articles and landing pages that build authority and attract consistent organic traffic',
+                        'Monthly plain-English reporting — showing what is working, what is not, and what we are doing about it',
+                    ],
+                },
+                {
+                    title: 'SEO & Agent Optimisation',
+                    bullets: [
+                        'Technical SEO audit — identifies and fixes issues that prevent Google from correctly indexing your site',
+                        'On-page SEO — optimises page titles, headings, content structure, and internal linking for the right keywords',
+                        'Local SEO — ensures your business appears in local search and Google Maps for searches in your area',
+                        'Backlink building — earns links from credible websites that signal authority to Google',
+                        'Agent Optimisation — structures your website content and schema markup so AI assistants like ChatGPT and Google AI correctly understand and recommend your business',
+                        'Monthly keyword ranking and traffic reports in plain English',
+                    ],
+                    note: 'When someone asks ChatGPT "who is the best web agency in Chester?" or asks Google AI "which plumber near me has good reviews?", the AI draws on structured data and website content to form its answer. Agent Optimisation ensures your business is represented accurately and favourably in these AI-generated responses — a competitive advantage most businesses are not yet acting on.',
+                },
+            ],
         },
         {
             id: 'ai-chatbots',
@@ -79,6 +129,34 @@ const Services: React.FC = () => {
             whoFor: 'Any business owner who spends time on admin tasks that could be handled by a computer. Particularly valuable for sole traders and small teams where every hour counts.',
             pricing: 'From £199 per automation workflow, or included in the Growth and Full Digital packages',
             ctaLabel: 'Get a Quote for Automation',
+            subSections: [
+                {
+                    title: 'HR & Staff Management Automation',
+                    groups: [
+                        {
+                            title: 'HR Management',
+                            bullets: [
+                                'Employee onboarding portals — automated welcome flows, document collection, and first-week task checklists',
+                                'Leave and absence management — self-service holiday requests, approval workflows, and absence tracking dashboards',
+                                'Performance review systems — structured review cycles, goal setting, and manager visibility in one place',
+                                'HR document management — secure, searchable storage for contracts, policies, and compliance records',
+                                'AI-assisted HR chatbot — answers common HR questions instantly, reducing admin load on managers and HR teams',
+                            ],
+                        },
+                        {
+                            title: 'Staff Management',
+                            bullets: [
+                                'Rota and shift scheduling — drag-and-drop schedule builders with automatic conflict detection',
+                                'Shift swap and cover requests — staff request changes, managers approve with one click',
+                                'Attendance and timesheet tracking — mobile clock-in/clock-out with automatic timesheet generation',
+                                'Team communication tools — shift reminders, announcements, and direct messaging in one place',
+                                'Staff availability management — staff submit availability, system builds rotas automatically',
+                                'Payroll export — timesheets exported in formats compatible with common payroll systems',
+                            ],
+                        },
+                    ],
+                },
+            ],
         },
         {
             id: 'rescue',
@@ -203,10 +281,48 @@ const Services: React.FC = () => {
                                 {service.bullets.map((bullet, bidx) => (
                                     <li key={bidx} className="flex items-start gap-3">
                                         <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
-                                        <span className="text-primary/70">{bullet}</span>
+                                        <BulletText text={bullet} />
                                     </li>
                                 ))}
                             </ul>
+
+                            {service.subSections && service.subSections.map((section, sidx) => (
+                                <div key={sidx} className="mb-8 max-w-3xl border-t border-surface/40 pt-6">
+                                    <p className="text-xs font-bold uppercase tracking-widest text-secondary mb-4">{section.title}</p>
+
+                                    {section.bullets && (
+                                        <ul className="space-y-3 mb-4">
+                                            {section.bullets.map((bullet, bidx) => (
+                                                <li key={bidx} className="flex items-start gap-3">
+                                                    <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+                                                    <BulletText text={bullet} />
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
+
+                                    {section.groups && section.groups.map((group, gidx) => (
+                                        <div key={gidx} className={gidx > 0 ? 'mt-5' : ''}>
+                                            <p className="text-sm font-bold text-primary mb-3">{group.title}</p>
+                                            <ul className="space-y-3">
+                                                {group.bullets.map((bullet, bidx) => (
+                                                    <li key={bidx} className="flex items-start gap-3">
+                                                        <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+                                                        <BulletText text={bullet} />
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    ))}
+
+                                    {section.note && (
+                                        <div className="mt-5 bg-surface rounded-xl p-4 border-l-4 border-secondary">
+                                            <p className="text-xs font-bold uppercase tracking-widest text-secondary mb-2">About Agent Optimisation</p>
+                                            <p className="text-sm text-primary/70 leading-relaxed">{section.note}</p>
+                                        </div>
+                                    )}
+                                </div>
+                            ))}
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 max-w-3xl">
                                 <div className="bg-surface rounded-xl p-4">
