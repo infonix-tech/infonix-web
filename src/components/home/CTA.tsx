@@ -15,7 +15,7 @@ const CTA: React.FC = () => {
                     <span className="text-secondary">Your Business?</span>
                 </h2>
                 <p className="text-base sm:text-lg md:text-xl text-primary/70 mb-10 sm:mb-12 max-w-2xl mx-auto leading-relaxed font-medium">
-                    Let's discuss how Infonix Solutions can support your growth with expert consulting in software engineering, HR, and finance.
+                    Let's discuss how Infonix Solutions can build your website, automate your business, and help you get found online — anywhere in the world.
                 </p>
 
                 <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8">

@@ -3,17 +3,17 @@ import { CheckCircle, Clock, Globe2, Target, Search, Settings, Wrench, TrendingU
 
 const WhyInfonix: React.FC = () => {
     const trustBlocks = [
-        { title: "UK Registered Business", icon: CheckCircle, desc: "Fully compliant and officially registered in the UK." },
-        { title: "Experienced Consulting Team", icon: Target, desc: "Over 7 years of delivering high-quality solutions." },
-        { title: "Cross Industry Solutions", icon: Globe2, desc: "Deep domain knowledge across multiple sectors." },
-        { title: "Results Focused Approach", icon: TrendingUp, desc: "We measure success by the value we create for you." },
+        { title: "UK Registered Business", icon: CheckCircle, desc: "Fully compliant and officially registered in the UK — transparent, accountable, and here for the long term." },
+        { title: "8+ Years of Delivery", icon: Target, desc: "Founded in February 2018, we have been delivering websites, digital tools, and automation for businesses for over 8 years." },
+        { title: "10+ Services Under One Roof", icon: Globe2, desc: "From website design to AI chatbots, local SEO, automation, and custom software — no need to manage multiple suppliers." },
+        { title: "Results-Focused Approach", icon: TrendingUp, desc: "Every project starts with a clear goal. We track enquiries, rankings, and growth so you can see the value we deliver." },
     ];
 
     const processSteps = [
-        { num: "01", title: "Discover", icon: <Search className="w-8 h-8 text-primary" />, desc: "We analyze your current challenges and define clear objectives." },
-        { num: "02", title: "Strategize", icon: <Settings className="w-8 h-8 text-primary" />, desc: "Our experts design a tailored roadmap for your specific needs." },
-        { num: "03", title: "Build", icon: <Wrench className="w-8 h-8 text-primary" />, desc: "We execute the strategy with precision and agility." },
-        { num: "04", title: "Scale", icon: <TrendingUp className="w-8 h-8 text-primary" />, desc: "Continuous support and optimization for long-term growth." },
+        { num: "01", title: "Discover", icon: <Search className="w-8 h-8 text-primary" />, desc: "We ask the right questions about your business, your customers, and what you need to grow — then define a clear scope." },
+        { num: "02", title: "Plan", icon: <Settings className="w-8 h-8 text-primary" />, desc: "We design a solution tailored to your industry and budget, with a fixed price and agreed timeline before any work begins." },
+        { num: "03", title: "Build", icon: <Wrench className="w-8 h-8 text-primary" />, desc: "Our team delivers your website, chatbot, or automation — with regular updates and your input at every key stage." },
+        { num: "04", title: "Grow", icon: <TrendingUp className="w-8 h-8 text-primary" />, desc: "We monitor results, report monthly in plain English, and keep optimising so your digital presence keeps improving." },
     ];
 
     return (
@@ -28,9 +28,9 @@ const WhyInfonix: React.FC = () => {
 
                         <div>
                             <h2 className="text-sm font-black tracking-[0.3em] text-secondary uppercase mb-4">Why Choose Us</h2>
-                            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-6 sm:mb-8 tracking-tight">Built on Trust & Expertise</h3>
+                            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-6 sm:mb-8 tracking-tight">Built to Grow Your Business</h3>
                             <p className="text-primary/70 text-base sm:text-lg mb-8 sm:mb-10 leading-relaxed font-medium">
-                                We don't just provide services; we build lasting partnerships. Our approach is grounded in transparency, deep industry knowledge, and a relentless focus on delivering measurable outcomes.
+                                We build websites that generate real enquiries, chatbots that work while you sleep, and automation that saves your team hours every week. Everything we do is grounded in transparency and a relentless focus on measurable results for your business.
                             </p>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
@@ -61,7 +61,7 @@ const WhyInfonix: React.FC = () => {
                                         <Clock className="w-8 h-8 text-secondary" />
                                     </div>
                                     <div>
-                                        <p className="text-4xl font-black text-white leading-none mb-1">7+ <span className="text-lg font-bold text-secondary">Years</span></p>
+                                        <p className="text-4xl font-black text-white leading-none mb-1">8+ <span className="text-lg font-bold text-secondary">Years</span></p>
                                         <p className="text-xs text-primary/60 uppercase font-black tracking-widest">Of Delivering Excellence</p>
                                     </div>
                                 </div>
