@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Truck, Gift, Tags, Users, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Truck, Gift, Tags, Users, CheckCircle2 } from 'lucide-react';
 import { useSEO } from '../hooks/useSEO';
 
 interface Project {
@@ -170,7 +170,7 @@ const Projects: React.FC = () => {
                 </div>
             </section>
 
-            {/* CTA Section */}
+            {/* Closing CTA Section */}
             <section className="bg-primary py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 text-center border-t border-surface/20">
                 <div className="max-w-3xl mx-auto">
                     <motion.div
@@ -180,18 +180,16 @@ const Projects: React.FC = () => {
                         transition={{ duration: 0.6 }}
                     >
                         <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif font-bold text-white mb-6">
-                            Have a Product in Mind?
+                            Have a Project in Mind?
                         </h2>
                         <p className="text-base sm:text-lg text-surface/80 mb-8 sm:mb-10 leading-relaxed">
-                            Whether you're scaling an existing platform or building something new, our team
-                            can help engineer it end-to-end.
+                            Whether you are starting from scratch or need us to rescue a project that stalled — we would love to hear about it. Get in touch for a free, no-obligation conversation.
                         </p>
                         <Link
                             to="/contact"
                             className="inline-flex items-center justify-center bg-secondary hover:bg-white hover:text-primary text-background font-bold py-3 px-8 sm:py-4 sm:px-10 rounded-full transition-all duration-300 shadow-lg"
                         >
-                            Start a Project
-                            <ArrowRight className="ml-2 w-5 h-5" />
+                            Get in Touch →
                         </Link>
                     </motion.div>
                 </div>

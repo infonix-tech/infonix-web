@@ -11,8 +11,8 @@ const CTA: React.FC = () => {
 
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
                 <h2 className="text-3xl sm:text-5xl md:text-7xl font-bold text-primary mb-6 sm:mb-8 leading-tight tracking-tight">
-                    Ready to Transform <br />
-                    <span className="text-secondary">Your Business?</span>
+                    Is Your Business <br />
+                    <span className="text-secondary">Invisible Online?</span> Let's Fix That.
                 </h2>
                 <p className="text-base sm:text-lg md:text-xl text-primary/70 mb-10 sm:mb-12 max-w-2xl mx-auto leading-relaxed font-medium">
                     Let's discuss how Infonix Solutions can build your website, automate your business, and help you get found online — anywhere in the world.
