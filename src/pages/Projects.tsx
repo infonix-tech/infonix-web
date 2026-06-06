@@ -74,17 +74,17 @@ const projects: Project[] = [
 
 const Projects: React.FC = () => {
     useSEO({
-        title: 'Our Work — Swiftly, GiftGrow & More',
+        title: 'Our Work — Software & Web Solutions Portfolio',
         description:
-            'Selected products engineered by Infonix Solutions — Swiftly, GiftGrow, HighStreetDeals, and Autism Connect Hub. From on-demand logistics to inclusive community platforms.',
+            'Software and web solutions engineered by Infonix Solutions — Swiftly, GiftGrow, HighStreetDeals and Autism Connect Hub. Custom builds for businesses in Liverpool, the North West and across the UK.',
         path: '/projects',
         keywords: [
+            'software development portfolio UK',
+            'web development Liverpool',
+            'custom software projects',
             'Swiftly',
             'GiftGrow',
-            'HighStreetDeals',
-            'Autism Connect Hub',
             'Infonix projects',
-            'UK product engineering',
         ],
     });
 

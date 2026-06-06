@@ -42,17 +42,47 @@ function BulletText({ text }: { text: string }) {
 
 const Services: React.FC = () => {
     useSEO({
-        title: 'Services — Web Design, AI Chatbots & Automation | Infonix Solutions',
+        title: 'Software, Web & Business Solutions — Services',
         description:
-            'Infonix Solutions offers website design, AI chatbots, automation, and software consulting for businesses worldwide. Competitive prices. Real results. Headquartered in Chester, UK since 2018.',
+            'Software development, website design, AI chatbots, business automation and technical rescue projects for companies in Liverpool, the North West and across the UK. Competitive fixed prices since 2018.',
         path: '/services',
         keywords: [
-            'web design UK',
+            'software solutions UK',
+            'software development Liverpool',
+            'business solutions UK',
+            'technical solutions Liverpool',
+            'web design Liverpool',
             'AI chatbot small business',
-            'business automation UK',
+            'business automation North West',
             'website design Chester',
-            'rescue project developer',
-            'local SEO UK',
+        ],
+        jsonLd: [
+            {
+                '@context': 'https://schema.org',
+                '@type': 'BreadcrumbList',
+                itemListElement: [
+                    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://infonixsolutions.co.uk/' },
+                    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://infonixsolutions.co.uk/services' },
+                ],
+            },
+            {
+                '@context': 'https://schema.org',
+                '@type': 'Service',
+                serviceType: 'Software, web and business solutions',
+                provider: { '@id': 'https://infonixsolutions.co.uk/#organization' },
+                areaServed: ['Liverpool', 'Merseyside', 'North West England', 'United Kingdom'],
+                hasOfferCatalog: {
+                    '@type': 'OfferCatalog',
+                    name: 'Services',
+                    itemListElement: [
+                        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Custom Software Development' } },
+                        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Website Design & Development' } },
+                        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'AI Chatbots' } },
+                        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Business Automation' } },
+                        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Technical & Rescue Projects' } },
+                    ],
+                },
+            },
         ],
     });
 

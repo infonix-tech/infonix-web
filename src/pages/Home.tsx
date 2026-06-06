@@ -13,18 +13,50 @@ import heroVideo from '../assets/Website_hero_video.mp4';
 
 const Home: React.FC = () => {
     useSEO({
-        title: 'Websites, AI Chatbots & Automation for Businesses',
+        title: 'Software, Web & Business Solutions in Liverpool & the UK',
         description:
-            'Infonix Solutions builds modern websites, AI chatbots, and automation tools for businesses worldwide. Headquartered in Chester, UK. Get a free quote today.',
+            'Infonix Solutions delivers software solutions, business solutions, websites, AI chatbots and automation for companies in Liverpool, the North West and across the UK. Get a free quote today.',
         path: '/',
         keywords: [
+            'software solutions Liverpool',
+            'business solutions Liverpool',
+            'technical solutions UK',
+            'software solutions UK',
+            'web design Liverpool',
+            'business automation North West',
+            'AI chatbot UK',
             'Infonix Solutions',
-            'web design',
-            'AI chatbot for small business',
-            'website design Chester',
-            'AI automation',
-            'web design agency',
         ],
+        jsonLd: {
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+                {
+                    '@type': 'Question',
+                    name: 'Do you provide software solutions in Liverpool?',
+                    acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'Yes. Infonix Solutions delivers software development, websites, AI chatbots and business automation for companies across Liverpool, Merseyside and the wider North West, as well as throughout the UK.',
+                    },
+                },
+                {
+                    '@type': 'Question',
+                    name: 'What kinds of business and technical solutions do you offer?',
+                    acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'We build custom software, modern websites, AI chatbots and workflow automation, and we rescue stalled technical projects — practical business solutions that help companies get found online, save time and grow.',
+                    },
+                },
+                {
+                    '@type': 'Question',
+                    name: 'How much do your solutions cost?',
+                    acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'Pricing depends on scope. We offer competitive fixed-price packages and free quotes — contact us on 01244 840089 or via the website for a tailored estimate.',
+                    },
+                },
+            ],
+        },
     });
 
     const containerRef = useRef<HTMLDivElement>(null);
@@ -187,7 +219,7 @@ const Home: React.FC = () => {
                         transition={{ duration: 0.8, delay: 2.2 }}
                         className="text-base sm:text-lg md:text-xl text-gray-500 mb-8 sm:mb-10 max-w-2xl font-bold drop-shadow-[0_1px_5px_rgba(255,255,255,0.8)] px-2"
                     >
-                        From sole traders to growing companies — we help businesses get found online, automate customer enquiries, and grow without hiring extra staff. Headquartered in Chester, UK. Delivering worldwide.
+                        Software solutions, websites, AI chatbots and automation that help businesses get found online, automate customer enquiries, and grow without hiring extra staff. Based in Chester — serving Liverpool, the North West and across the UK.
                     </motion.p>
 
                     <motion.div
