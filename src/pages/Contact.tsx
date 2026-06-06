@@ -27,10 +27,22 @@ const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY as string | undefined;
 
 const Contact: React.FC = () => {
     useSEO({
-        title: 'Contact Us — Get a Free Quote | Infonix Solutions',
+        title: 'Contact Us — Get a Free Quote for Software & Business Solutions',
         description:
-            "Get in touch with Infonix Solutions. Call 01244 840089 or email hello@infonixsolutions.co.uk — our Chester-based team delivers websites, AI chatbots, and automation for businesses worldwide.",
+            "Get a free quote for software, web and business solutions. Call 01244 840089 or email hello@infonixsolutions.co.uk — serving Liverpool, the North West and the UK from Chester.",
         path: '/contact',
+        keywords: [
+            'software company Liverpool contact',
+            'web design quote UK',
+            'business solutions Chester',
+        ],
+        jsonLd: {
+            '@context': 'https://schema.org',
+            '@type': 'ContactPage',
+            name: 'Contact Infonix Solutions',
+            url: 'https://infonixsolutions.co.uk/contact',
+            mainEntity: { '@id': 'https://infonixsolutions.co.uk/#organization' },
+        },
     });
 
     const [form, setForm] = useState<FormState>(initialForm);

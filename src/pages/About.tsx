@@ -6,10 +6,16 @@ import { useSEO } from '../hooks/useSEO';
 
 const About: React.FC = () => {
     useSEO({
-        title: 'About Us — Infonix Solutions',
+        title: 'About Us — UK Software & Business Solutions Agency',
         description:
-            'Infonix Solutions is a UK-based digital agency founded in 2018, headquartered in Chester. A team of 20 spanning the UK, India, and Sri Lanka — helping businesses get found online, automate operations, and grow.',
+            'Infonix Solutions is a UK software and business solutions agency founded in 2018, based in Chester and serving Liverpool, the North West and beyond. A team of 20 helping businesses get found online, automate operations and grow.',
         path: '/about',
+        keywords: [
+            'software solutions agency UK',
+            'business solutions company Liverpool',
+            'web design agency Chester',
+            'digital agency North West',
+        ],
     });
 
     const stats = [

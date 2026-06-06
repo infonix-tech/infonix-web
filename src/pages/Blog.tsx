@@ -33,10 +33,15 @@ const articles = [
 
 const Blog: React.FC = () => {
     useSEO({
-        title: 'Blog — Digital Tips for UK Businesses | Infonix Solutions',
+        title: 'Blog — Software, Web & Digital Growth Tips for UK Businesses',
         description:
-            'Practical advice for UK businesses on websites, AI chatbots, local SEO, and digital growth from Infonix Solutions, Chester.',
+            'Practical advice for UK businesses on software solutions, websites, AI chatbots, local SEO and digital growth from Infonix Solutions — serving Liverpool, the North West and the UK.',
         path: '/blog',
+        keywords: [
+            'business software tips UK',
+            'local SEO Liverpool',
+            'web design advice North West',
+        ],
     });
 
     return (

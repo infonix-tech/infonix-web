@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
                             <span className="block text-xs font-bold tracking-[0.25em] text-secondary uppercase">Solutions</span>
                         </Link>
                         <p className="text-sm leading-relaxed text-surface/80 font-medium">
-                            A UK-based digital agency delivering websites, AI chatbots, and automation for businesses worldwide. Headquartered in Chester since 2018.
+                            A UK software and business solutions agency delivering websites, AI chatbots and automation for companies in Liverpool, the North West and across the UK. Based in Chester since 2018.
                         </p>
                         <div className="flex space-x-5">
                             <a href="https://www.linkedin.com/company/105996236" target="_blank" rel="noopener noreferrer" className="p-2 rounded-xl bg-white/5 text-surface/80 hover:text-secondary hover:bg-secondary/10 transition-all" aria-label="Infonix Solutions on LinkedIn"><Linkedin size={20} /></a>
@@ -43,6 +43,7 @@ const Footer: React.FC = () => {
                             <li><Link to="/services" className="text-sm font-bold text-surface/80 hover:text-secondary transition-colors uppercase tracking-widest">AI Chatbots</Link></li>
                             <li><Link to="/services" className="text-sm font-bold text-surface/80 hover:text-secondary transition-colors uppercase tracking-widest">AI Automation</Link></li>
                             <li><Link to="/services" className="text-sm font-bold text-surface/80 hover:text-secondary transition-colors uppercase tracking-widest">Rescue Projects</Link></li>
+                            <li><Link to="/software-solutions-liverpool" className="text-sm font-bold text-surface/80 hover:text-secondary transition-colors uppercase tracking-widest">Solutions in Liverpool</Link></li>
                         </ul>
                     </div>
 
@@ -73,6 +74,10 @@ const Footer: React.FC = () => {
                         </ul>
                     </div>
                 </div>
+
+                <p className="text-xs text-surface/60 leading-relaxed mb-6 text-center md:text-left">
+                    Software solutions, business solutions, web design, AI chatbots and automation serving Liverpool, Chester, Wirral, Warrington, Manchester, Merseyside and the wider North West of England — and clients across the UK.
+                </p>
 
                 <div className="border-t border-white/5 pt-8 sm:pt-10 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0">
                     <p className="text-[10px] text-surface/60 text-center md:text-left uppercase font-black tracking-[0.3em]">

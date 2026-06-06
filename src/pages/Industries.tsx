@@ -6,10 +6,17 @@ import { useSEO } from '../hooks/useSEO';
 
 const Industries: React.FC = () => {
     useSEO({
-        title: 'Industries We Serve — Web Design & AI Solutions for Businesses Worldwide | Infonix Solutions',
+        title: 'Industries We Serve — Software, Web & Business Solutions',
         description:
-            'Infonix Solutions works with businesses worldwide in trades, hospitality, health, retail, events, and more. Affordable websites, AI chatbots, and automation tailored to your industry. Headquartered in Chester, UK since 2018.',
+            'Software, web and business solutions for trades, hospitality, health, retail, events and more across Liverpool, the North West and the UK. Websites, AI chatbots and automation tailored to your industry since 2018.',
         path: '/industries',
+        keywords: [
+            'business solutions for trades',
+            'software solutions Liverpool',
+            'web design for small business UK',
+            'AI chatbot for business',
+            'business automation North West',
+        ],
     });
 
     const industriesData = [
