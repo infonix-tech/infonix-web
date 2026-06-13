@@ -51,7 +51,7 @@ const WhyInfonix: React.FC = () => {
                         <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
                             <img
                                 src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                                alt="Business professionals in modern office"
+                                alt="Infonix Solutions UK team providing custom software development and web design services"
                                 className="w-full h-full object-cover rounded-3xl opacity-90 transition-all duration-700 group-hover:scale-105"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>

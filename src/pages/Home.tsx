@@ -187,7 +187,7 @@ const Home: React.FC = () => {
                                 </motion.span>
                             ))}
                         </h1>
-                        <h1 className="text-5xl sm:text-6xl md:text-8xl font-black text-secondary tracking-tight my-2 overflow-hidden drop-shadow-[0_2px_15px_rgba(255,255,255,0.5)]">
+                        <div className="text-5xl sm:text-6xl md:text-8xl font-black text-secondary tracking-tight my-2 overflow-hidden drop-shadow-[0_2px_15px_rgba(255,255,255,0.5)]">
                             {poweredBy.split("").map((char, i) => (
                                 <motion.span
                                     key={i}
@@ -198,8 +198,8 @@ const Home: React.FC = () => {
                                     {char === " " ? "\u00A0" : char}
                                 </motion.span>
                             ))}
-                        </h1>
-                        <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-primary tracking-tight overflow-hidden drop-shadow-[0_2px_10px_rgba(255,255,255,0.8)]">
+                        </div>
+                        <div className="text-4xl sm:text-5xl md:text-7xl font-bold text-primary tracking-tight overflow-hidden drop-shadow-[0_2px_10px_rgba(255,255,255,0.8)]">
                             {company.split("").map((char, i) => (
                                 <motion.span
                                     key={i}
@@ -210,7 +210,7 @@ const Home: React.FC = () => {
                                     {char === " " ? "\u00A0" : char}
                                 </motion.span>
                             ))}
-                        </h1>
+                        </div>
                     </motion.div>
 
                     <motion.p

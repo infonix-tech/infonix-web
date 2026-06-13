@@ -95,7 +95,7 @@ const ExperienceNav: React.FC = () => {
 
                         {/* Background Decoration */}
                         <div className="absolute top-0 right-0 p-24 opacity-5 pointer-events-none select-none">
-                            <h1 className="text-[20vw] font-black text-white leading-none">INFONIX</h1>
+                            <div className="text-[20vw] font-black text-white leading-none">INFONIX</div>
                         </div>
                     </motion.div>
                 )}
