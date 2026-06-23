@@ -6,6 +6,33 @@ import { useSEO } from '../hooks/useSEO';
 
 const articles = [
     {
+        title: 'The Complete Guide to UK Software Companies in 2025',
+        date: 'June 2026',
+        link: '/blog/uk-software-companies-guide',
+        summary: [
+            'Finding the right UK software company can be overwhelming. This comprehensive guide walks you through what to look for, what questions to ask, and how to avoid costly mistakes when hiring a software development firm.',
+            'Learn about transparent pricing, proven track records, technical expertise, communication standards, and the key differences between UK-based companies and offshore alternatives.',
+        ],
+    },
+    {
+        title: 'Failing Business Solutions: How Software & Automation Can Save Your Company',
+        date: 'June 2026',
+        link: '/blog/failing-business-solutions',
+        summary: [
+            'Is your business struggling? Many companies fail not because their product is bad, but because they are drowning in inefficiency, fragmented systems, and manual processes. The right software and automation can turn things around fast.',
+            'Discover how custom software, websites, AI chatbots and automation help struggling businesses become profitable again—with real examples and quick wins you can implement immediately.',
+        ],
+    },
+    {
+        title: 'Infonix Solutions UK — Software, Web & Business Solutions',
+        date: 'June 2026',
+        link: '/blog/infonix-solutions-uk',
+        summary: [
+            'Infonix Solutions is a UK software company based in Chester, delivering custom software, modern websites, AI chatbots and business automation for companies across Liverpool, the North West and the UK since 2018.',
+            'Learn why UK-based teams deliver better results, how our process works, and why businesses trust us for software, websites, chatbots, automation and technical rescue projects.',
+        ],
+    },
+    {
         title: '5 Signs Your Business Website Is Costing You Customers',
         date: 'June 2026',
         summary: [
@@ -90,10 +117,10 @@ const Blog: React.FC = () => {
                                 </p>
                             ))}
                             <Link
-                                to="/contact"
+                                to={article.link || '/contact'}
                                 className="inline-flex items-center gap-2 text-secondary hover:text-primary font-semibold transition-colors mt-2 text-sm"
                             >
-                                Discuss this with us <ArrowRight className="w-4 h-4" />
+                                {article.link ? 'Read full article' : 'Discuss this with us'} <ArrowRight className="w-4 h-4" />
                             </Link>
                         </motion.article>
                     ))}

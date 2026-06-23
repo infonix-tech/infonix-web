@@ -53,12 +53,17 @@ const UkSoftwareCompany: React.FC = () => {
         path: '/uk-software-development-company',
         keywords: [
             'UK software development company',
+            'UK software companies',
             'UK software solutions company',
             'software solutions company UK',
             'custom software development UK',
             'bespoke software company UK',
             'software company North West',
+            'software company Liverpool',
+            'software company UK',
             'AI software company UK',
+            'web software development UK',
+            'software development services UK',
         ],
         jsonLd: [
             {

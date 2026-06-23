@@ -19,6 +19,9 @@ const Contact = lazy(() => import('./pages/Contact'));
 const Blog = lazy(() => import('./pages/Blog'));
 const Liverpool = lazy(() => import('./pages/Liverpool'));
 const UkSoftwareCompany = lazy(() => import('./pages/UkSoftwareCompany'));
+const UkSoftwareCompaniesBlog = lazy(() => import('./pages/blog/UkSoftwareCompanies'));
+const FailingBusinessSolutionsBlog = lazy(() => import('./pages/blog/FailingBusinessSolutions'));
+const InfonixSolutionsUkBlog = lazy(() => import('./pages/blog/InfonixSolutionsUk'));
 
 function App() {
   return (
@@ -37,6 +40,9 @@ function App() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/uk-software-companies-guide" element={<UkSoftwareCompaniesBlog />} />
+              <Route path="/blog/failing-business-solutions" element={<FailingBusinessSolutionsBlog />} />
+              <Route path="/blog/infonix-solutions-uk" element={<InfonixSolutionsUkBlog />} />
               <Route path="/software-solutions-liverpool" element={<Liverpool />} />
               <Route path="/uk-software-development-company" element={<UkSoftwareCompany />} />
             </Routes>

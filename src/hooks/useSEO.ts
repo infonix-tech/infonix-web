@@ -13,6 +13,12 @@ interface SEOOptions {
     keywords?: string[];
     /** Page-specific JSON-LD structured data (Service, FAQPage, BreadcrumbList, etc.). */
     jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+    /** Article date for blog posts */
+    articleDate?: string;
+    /** Article author */
+    articleAuthor?: string;
+    /** Alternative names for the page */
+    alternateNames?: string[];
 }
 
 const setMeta = (selector: string, attr: 'content' | 'href', value: string) => {
@@ -34,7 +40,17 @@ const setMeta = (selector: string, attr: 'content' | 'href', value: string) => {
     el.setAttribute(attr, value);
 };
 
-export const useSEO = ({ title, description, path = '/', image = DEFAULT_IMAGE, keywords, jsonLd }: SEOOptions) => {
+export const useSEO = ({ 
+    title, 
+    description, 
+    path = '/', 
+    image = DEFAULT_IMAGE, 
+    keywords, 
+    jsonLd,
+    articleDate,
+    articleAuthor,
+    alternateNames 
+}: SEOOptions) => {
     useEffect(() => {
         const fullTitle = path === '/' ? `${SITE_NAME} — ${title}` : `${title} | ${SITE_NAME}`;
         const url = `${SITE_URL}${path}`;
@@ -46,14 +62,27 @@ export const useSEO = ({ title, description, path = '/', image = DEFAULT_IMAGE, 
             setMeta('meta[name="keywords"]', 'content', keywords.join(', '));
         }
 
+        // Add additional meta tags for better SEO
+        setMeta('meta[name="robots"]', 'content', 'index, follow, max-image-preview:large, max-snippet:-1');
+        setMeta('meta[name="googlebot"]', 'content', 'index, follow, max-image-preview:large, max-snippet:-1');
+
+        // Article metadata for blog posts
+        if (articleDate) {
+            setMeta('meta[property="article:published_time"]', 'content', articleDate);
+        }
+        if (articleAuthor) {
+            setMeta('meta[property="article:author"]', 'content', articleAuthor);
+        }
+
         setMeta('link[rel="canonical"]', 'href', url);
 
         setMeta('meta[property="og:title"]', 'content', fullTitle);
         setMeta('meta[property="og:description"]', 'content', description);
         setMeta('meta[property="og:url"]', 'content', url);
         setMeta('meta[property="og:image"]', 'content', image);
-        setMeta('meta[property="og:type"]', 'content', 'website');
+        setMeta('meta[property="og:type"]', 'content', path.includes('/blog') ? 'article' : 'website');
         setMeta('meta[property="og:site_name"]', 'content', SITE_NAME);
+        setMeta('meta[property="og:locale"]', 'content', 'en_GB');
 
         setMeta('meta[name="twitter:card"]', 'content', 'summary_large_image');
         setMeta('meta[name="twitter:title"]', 'content', fullTitle);
@@ -74,5 +103,5 @@ export const useSEO = ({ title, description, path = '/', image = DEFAULT_IMAGE, 
         return () => {
             document.getElementById(JSONLD_ID)?.remove();
         };
-    }, [title, description, path, image, keywords, jsonLd]);
+    }, [title, description, path, image, keywords, jsonLd, articleDate, articleAuthor, alternateNames]);
 };

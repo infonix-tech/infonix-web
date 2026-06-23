@@ -18,19 +18,35 @@ const Home: React.FC = () => {
             'Infonix Solutions delivers software solutions, business solutions, websites, AI chatbots and automation for companies in Liverpool, the North West and across the UK. Get a free quote today.',
         path: '/',
         keywords: [
+            'UK software companies',
+            'software solutions UK',
+            'UK software development',
+            'software company UK',
+            'bespoke software UK',
+            'custom software development UK',
             'software solutions Liverpool',
             'business solutions Liverpool',
+            'business solutions UK',
             'technical solutions UK',
-            'software solutions UK',
             'web design Liverpool',
+            'web design UK',
             'business automation North West',
             'AI chatbot UK',
+            'Infonix Solutions UK',
             'Infonix Solutions',
         ],
         jsonLd: {
             '@context': 'https://schema.org',
             '@type': 'FAQPage',
             mainEntity: [
+                {
+                    '@type': 'Question',
+                    name: 'Are you a UK software company?',
+                    acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'Yes. Infonix Solutions is a UK-based software company headquartered in Chester. We deliver custom software, websites, AI chatbots and business automation for companies across Liverpool, Merseyside and the wider North West, as well as throughout the UK.',
+                    },
+                },
                 {
                     '@type': 'Question',
                     name: 'Do you provide software solutions in Liverpool?',
