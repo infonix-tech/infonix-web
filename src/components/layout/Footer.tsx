@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
                                 <div className="p-2 rounded-xl bg-secondary/10 mr-4 mt-1">
                                     <MapPin size={18} className="text-secondary" />
                                 </div>
-                                <span className="text-surface/80 font-medium">4 Chantry Court<br />Chester West Employment Park<br />Chester, CH1 4QN</span>
+                                <span className="text-surface/80 font-medium">CoWorkz Business Centre<br />Office 2 Main Office<br />Minerva Avenue<br />Chester West Employment Park<br />Chester, CH1 4QL</span>
                             </li>
                             <li className="flex items-center">
                                 <div className="p-2 rounded-xl bg-secondary/10 mr-4">
