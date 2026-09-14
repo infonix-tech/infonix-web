@@ -184,7 +184,7 @@ const InfonixSolutionsUk: React.FC = () => {
                 <li><strong>Phone:</strong> +44-1244-840089</li>
                 <li><strong>Email:</strong> hello@infonixsolutions.co.uk</li>
                 <li><strong>Website:</strong> infonixsolutions.co.uk</li>
-                <li><strong>Address:</strong> 4 Chantry Court, Chester West Employment Park, Chester, CH1 4QN</li>
+                <li><strong>Address:</strong> CoWorkz Business Centre, Office 2 Main Office, Minerva Avenue, Chester West Employment Park, Chester, CH1 4QL</li>
             </ul>
 
             <p className="mt-6 pt-6 border-t border-primary/20 text-sm italic">

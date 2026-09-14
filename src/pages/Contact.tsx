@@ -292,7 +292,7 @@ const Contact: React.FC = () => {
                                 </div>
                                 <div>
                                     <p className="font-semibold text-primary">Address</p>
-                                    <p className="text-primary/70 mt-1">4 Chantry Court, Chester West<br />Employment Park, Chester, CH1 4QN</p>
+                                    <p className="text-primary/70 mt-1">CoWorkz Business Centre, Office 2 Main Office,<br />Minerva Avenue, Chester West Employment Park,<br />Chester, CH1 4QL</p>
                                 </div>
                             </div>
 
@@ -330,8 +330,8 @@ const Contact: React.FC = () => {
                         {/* Live Map */}
                         <div className="w-full h-64 sm:h-72 bg-surface rounded-2xl border border-accent overflow-hidden shadow-md">
                             <iframe
-                                title="Infonix Solutions office location — 4 Chantry Court, Chester West Employment Park, Chester, CH1 4QN"
-                                src="https://www.google.com/maps?q=4%20Chantry%20Court%2C%20Chester%20West%20Employment%20Park%2C%20Chester%2C%20CH1%204QN&z=16&output=embed"
+                                title="Infonix Solutions office location — CoWorkz Business Centre, Office 2 Main Office, Minerva Avenue, Chester West Employment Park, Chester, CH1 4QL"
+                                src="https://www.google.com/maps?q=CoWorkz%20Business%20Centre%2C%20Minerva%20Avenue%2C%20Chester%20West%20Employment%20Park%2C%20Chester%2C%20CH1%204QL&z=16&output=embed"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0 }}
@@ -341,7 +341,7 @@ const Contact: React.FC = () => {
                             />
                         </div>
                         <a
-                            href="https://www.google.com/maps/dir/?api=1&destination=4+Chantry+Court%2C+Chester+West+Employment+Park%2C+Chester%2C+CH1+4QN"
+                            href="https://www.google.com/maps/dir/?api=1&destination=CoWorkz+Business+Centre%2C+Minerva+Avenue%2C+Chester+West+Employment+Park%2C+Chester%2C+CH1+4QL"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="mt-3 inline-flex items-center justify-center text-sm font-bold text-secondary hover:text-primary transition-colors"
