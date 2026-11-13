@@ -292,7 +292,7 @@ const Contact: React.FC = () => {
                                 </div>
                                 <div>
                                     <p className="font-semibold text-primary">Address</p>
-                                    <p className="text-primary/70 mt-1">CoWorkz Business Centre, Office 2 Main Office,<br />Minerva Avenue, Chester West Employment Park,<br />Chester, CH1 4QL</p>
+                                    <p className="text-primary/70 mt-1">Regus House, Herons Way,<br />Chester Business Park,<br />Chester, CH4 9QR</p>
                                 </div>
                             </div>
 
@@ -330,8 +330,8 @@ const Contact: React.FC = () => {
                         {/* Live Map */}
                         <div className="w-full h-64 sm:h-72 bg-surface rounded-2xl border border-accent overflow-hidden shadow-md">
                             <iframe
-                                title="Infonix Solutions office location — CoWorkz Business Centre, Office 2 Main Office, Minerva Avenue, Chester West Employment Park, Chester, CH1 4QL"
-                                src="https://www.google.com/maps?q=CoWorkz%20Business%20Centre%2C%20Minerva%20Avenue%2C%20Chester%20West%20Employment%20Park%2C%20Chester%2C%20CH1%204QL&z=16&output=embed"
+                                title="Infonix Solutions office location — Regus House, Herons Way, Chester Business Park, Chester, CH4 9QR"
+                                src="https://www.google.com/maps?q=Regus%20House%2C%20Herons%20Way%2C%20Chester%20Business%20Park%2C%20Chester%2C%20CH4%209QR&z=16&output=embed"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0 }}
@@ -341,7 +341,7 @@ const Contact: React.FC = () => {
                             />
                         </div>
                         <a
-                            href="https://www.google.com/maps/dir/?api=1&destination=CoWorkz+Business+Centre%2C+Minerva+Avenue%2C+Chester+West+Employment+Park%2C+Chester%2C+CH1+4QL"
+                            href="https://www.google.com/maps/dir/?api=1&destination=Regus+House%2C+Herons+Way%2C+Chester+Business+Park%2C+Chester%2C+CH4+9QR"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="mt-3 inline-flex items-center justify-center text-sm font-bold text-secondary hover:text-primary transition-colors"
